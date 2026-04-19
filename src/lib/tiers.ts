@@ -1,12 +1,24 @@
+import iconVanilla from "@/assets/icon-vanilla.svg";
+import iconSword from "@/assets/icon-sword.svg";
+import iconAxe from "@/assets/icon-axe.svg";
+import iconPot from "@/assets/icon-pot.svg";
+import iconNethop from "@/assets/icon-nethop.svg";
+import iconUhc from "@/assets/icon-uhc.svg";
+import iconSmp from "@/assets/icon-smp.svg";
+import iconMace from "@/assets/icon-mace.png";
+import iconOverall from "@/assets/icon-overall.png";
+
+export const OVERALL_ICON = iconOverall;
+
 export const GAMEMODES = [
-  { key: "vanilla", label: "Vanilla" },
-  { key: "sword", label: "Sword" },
-  { key: "axe", label: "Axe" },
-  { key: "pot", label: "Pot" },
-  { key: "nethop", label: "NethOP" },
-  { key: "uhc", label: "UHC" },
-  { key: "smp", label: "SMP" },
-  { key: "mace", label: "Mace" },
+  { key: "vanilla", label: "Vanilla", icon: iconVanilla },
+  { key: "sword", label: "Sword", icon: iconSword },
+  { key: "axe", label: "Axe", icon: iconAxe },
+  { key: "pot", label: "Pot", icon: iconPot },
+  { key: "nethop", label: "NethOP", icon: iconNethop },
+  { key: "uhc", label: "UHC", icon: iconUhc },
+  { key: "smp", label: "SMP", icon: iconSmp },
+  { key: "mace", label: "Mace", icon: iconMace },
 ] as const;
 
 export type GamemodeKey = (typeof GAMEMODES)[number]["key"];
