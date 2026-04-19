@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { GAMEMODES, type PlayerRow as P, totalPoints, rankTitle, avatarUrl } from "@/lib/tiers";
 import { TierBadge } from "./TierBadge";
 import { Crown } from "lucide-react";
@@ -14,7 +15,11 @@ export function PlayerRow({ player, rank }: { player: P; rank: number }) {
   const isTop3 = rank <= 3;
 
   return (
-    <div className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-sm transition hover:border-primary/40 hover:bg-card md:grid-cols-[auto_2fr_auto_auto_auto] md:gap-6 md:px-5">
+    <Link
+      to="/player/$username"
+      params={{ username: player.username }}
+      className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-sm transition hover:border-primary/40 hover:bg-card md:grid-cols-[auto_2fr_auto_auto_auto] md:gap-6 md:px-5"
+    >
       {/* Rank */}
       <div
         className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold"
@@ -60,6 +65,6 @@ export function PlayerRow({ player, rank }: { player: P; rank: number }) {
           <TierBadge key={g.key} tier={player[g.key]} label={g.label} icon={g.icon} />
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
