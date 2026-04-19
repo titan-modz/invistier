@@ -30,13 +30,6 @@ export function SiteHeader() {
             </svg>
             Discord
           </a>
-          <Link
-            to="/admin/login"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 text-xs font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
-          >
-            <Shield className="h-3.5 w-3.5" />
-            Admin
-          </Link>
         </div>
       </div>
     </header>
