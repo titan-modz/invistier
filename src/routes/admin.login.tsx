@@ -1,7 +1,8 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Eye, Lock } from "lucide-react";
+import { Lock } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
@@ -52,12 +53,12 @@ function AdminLoginPage() {
       />
       <div className="w-full max-w-sm rounded-2xl border border-border bg-card/80 p-8 backdrop-blur-xl">
         <div className="mb-6 flex flex-col items-center gap-3 text-center">
-          <div
-            className="flex h-12 w-12 items-center justify-center rounded-xl"
-            style={{ background: "var(--gradient-rank-1)", boxShadow: "var(--shadow-glow)" }}
-          >
-            <Eye className="h-6 w-6 text-background" />
-          </div>
+          <img
+            src={logo}
+            alt="InvisTierlist"
+            className="h-16 w-16 rounded-2xl object-contain"
+            style={{ boxShadow: "var(--shadow-glow)" }}
+          />
           <div>
             <h1 className="text-xl font-extrabold tracking-tight">Admin Access</h1>
             <p className="mt-1 text-xs text-muted-foreground">InvisTierlist administration</p>

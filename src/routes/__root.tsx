@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import faviconUrl from "@/assets/logo.png?url";
 
 function NotFoundComponent() {
   return (
@@ -41,6 +42,15 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: faviconUrl,
+      },
+      {
+        rel: "apple-touch-icon",
+        href: faviconUrl,
       },
     ],
   }),
