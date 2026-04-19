@@ -29,14 +29,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "InvisTierlist — Minecraft PvP Tier Rankings" },
+      { name: "description", content: "Competitive Minecraft PvP rankings across all major gamemodes." },
+      { name: "author", content: "InvisTierlist" },
+      { property: "og:title", content: "InvisTierlist" },
+      { property: "og:description", content: "Minecraft PvP tier rankings." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
