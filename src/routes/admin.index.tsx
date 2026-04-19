@@ -9,7 +9,8 @@ import {
   totalPoints,
   avatarUrl,
 } from "@/lib/tiers";
-import { Eye, LogOut, Plus, Save, Trash2, X } from "lucide-react";
+import { LogOut, Plus, Save, Trash2, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/admin/")({
   head: () => ({
