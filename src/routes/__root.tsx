@@ -33,10 +33,14 @@ export const Route = createRootRoute({
       { title: "InvisTierlist — Minecraft PvP Tier Rankings" },
       { name: "description", content: "Competitive Minecraft PvP rankings across all major gamemodes." },
       { name: "author", content: "InvisTierlist" },
-      { property: "og:title", content: "InvisTierlist" },
-      { property: "og:description", content: "Minecraft PvP tier rankings." },
+      { property: "og:title", content: "InvisTierlist — Minecraft PvP Tier Rankings" },
+      { property: "og:description", content: "Competitive Minecraft PvP rankings across all major gamemodes." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "InvisTierlist — Minecraft PvP Tier Rankings" },
+      { name: "twitter:description", content: "Competitive Minecraft PvP rankings across all major gamemodes." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d101c18d-8c8a-4c2b-8bee-991bd6a07bf6/id-preview-3b0455ae--d5aa4b72-2c7b-4292-a43a-ee5e00c3b086.lovable.app-1776607583059.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d101c18d-8c8a-4c2b-8bee-991bd6a07bf6/id-preview-3b0455ae--d5aa4b72-2c7b-4292-a43a-ee5e00c3b086.lovable.app-1776607583059.png" },
     ],
     links: [
       {
