@@ -14,7 +14,7 @@ export function PlayerRow({ player, rank }: { player: P; rank: number }) {
   const isTop3 = rank <= 3;
 
   return (
-    <div className="group relative flex flex-col gap-3 rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-sm transition hover:border-primary/40 hover:bg-card md:flex-row md:items-center md:gap-6">
+    <div className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-sm transition hover:border-primary/40 hover:bg-card md:grid-cols-[auto_2fr_auto_auto_auto] md:gap-6 md:px-5">
       {/* Rank */}
       <div
         className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold"
@@ -28,7 +28,7 @@ export function PlayerRow({ player, rank }: { player: P; rank: number }) {
       </div>
 
       {/* Player */}
-      <div className="flex flex-1 items-center gap-3 min-w-0">
+      <div className="flex min-w-0 items-center gap-3">
         <img
           src={avatarUrl(player.username, 64)}
           alt={player.username}
@@ -36,28 +36,28 @@ export function PlayerRow({ player, rank }: { player: P; rank: number }) {
           loading="lazy"
         />
         <div className="min-w-0">
-          <div className="truncate font-semibold text-foreground">{player.username}</div>
-          <div className="text-xs text-primary">★ {title}</div>
+          <div className="truncate text-base font-bold text-foreground">{player.username}</div>
+          <div className="text-xs font-semibold text-primary">★ {title}</div>
         </div>
       </div>
 
       {/* Points */}
-      <div className="flex shrink-0 flex-col items-center md:items-start">
-        <div className="text-lg font-bold text-foreground">{points}</div>
+      <div className="hidden shrink-0 flex-col items-center md:flex">
+        <div className="text-lg font-extrabold text-foreground">{points}</div>
         <div className="text-[9px] uppercase tracking-wider text-muted-foreground">Points</div>
       </div>
 
       {/* Region */}
-      <div className="shrink-0">
-        <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
+      <div className="hidden shrink-0 md:block">
+        <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
           {player.region}
         </span>
       </div>
 
       {/* Tiers */}
-      <div className="flex flex-wrap items-center justify-end gap-2 md:gap-3">
+      <div className="col-span-3 flex flex-wrap items-start justify-end gap-2 md:col-span-1 md:gap-3">
         {GAMEMODES.map((g) => (
-          <TierBadge key={g.key} tier={player[g.key]} label={g.label} />
+          <TierBadge key={g.key} tier={player[g.key]} label={g.label} icon={g.icon} />
         ))}
       </div>
     </div>

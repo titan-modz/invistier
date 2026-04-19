@@ -1,24 +1,20 @@
 import { Link } from "@tanstack/react-router";
-import { Eye, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
         <Link to="/" className="flex items-center gap-3">
-          <div
-            className="flex h-10 w-10 items-center justify-center rounded-xl"
-            style={{ background: "var(--gradient-rank-1)", boxShadow: "var(--shadow-glow)" }}
-          >
-            <Eye className="h-5 w-5 text-background" />
-          </div>
-          <div className="leading-tight">
-            <div className="text-lg font-extrabold tracking-tight text-foreground">
-              Invis<span className="text-primary">Tierlist</span>
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Minecraft PvP Rankings
-            </div>
+          <img
+            src={logo}
+            alt="InvisTierlist"
+            className="h-10 w-10 rounded-xl object-contain"
+            style={{ boxShadow: "var(--shadow-glow)" }}
+          />
+          <div className="text-lg font-extrabold tracking-[0.18em] text-foreground md:text-xl">
+            INVIS<span className="text-primary"> TIERS</span>
           </div>
         </Link>
 
