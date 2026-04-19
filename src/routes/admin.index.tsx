@@ -101,12 +101,12 @@ function AdminPanel() {
       <header className="border-b border-border bg-card/40 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-8">
           <Link to="/" className="flex items-center gap-2">
-            <div
-              className="flex h-9 w-9 items-center justify-center rounded-lg"
-              style={{ background: "var(--gradient-rank-1)" }}
-            >
-              <Eye className="h-4 w-4 text-background" />
-            </div>
+            <img
+              src={logo}
+              alt="InvisTierlist"
+              className="h-10 w-10 rounded-lg object-contain"
+              style={{ boxShadow: "var(--shadow-glow)" }}
+            />
             <div>
               <div className="text-sm font-extrabold">InvisTierlist</div>
               <div className="text-[10px] uppercase tracking-wider text-primary">Admin Panel</div>

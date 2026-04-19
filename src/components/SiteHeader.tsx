@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Shield } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export function SiteHeader() {

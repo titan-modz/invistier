@@ -11,6 +11,7 @@ import {
   avatarUrl,
 } from "@/lib/tiers";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowLeft, Crown, Trophy } from "lucide-react";
 
 export const Route = createFileRoute("/player/$username")({
@@ -219,6 +220,7 @@ function PlayerProfilePage() {
           </div>
         </div>
       </main>
+      <SiteFooter />
     </div>
   );
 }
