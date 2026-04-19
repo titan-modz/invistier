@@ -10,6 +10,7 @@ import {
   type GamemodeKey,
 } from "@/lib/tiers";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { PlayerRow } from "@/components/PlayerRow";
 import { Search, Trophy } from "lucide-react";
 
@@ -132,6 +133,7 @@ function HomePage() {
           )}
         </div>
       </main>
+      <SiteFooter />
     </div>
   );
 }
